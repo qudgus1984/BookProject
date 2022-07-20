@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="70H-C5-f7p">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController id="Y6W-OH-hqX" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="30" y="80"/>
+        </scene>
+        <!--Book Collection View Controller-->
+        <scene sceneID="v1s-Ze-Ea1">
+            <objects>
+                <collectionViewController id="70H-C5-f7p" customClass="BookCollectionViewController" customModule="BookProject" customModuleProvider="target" sceneMemberID="viewController">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="IsX-JY-ACy">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="u2R-33-yay">
+                            <size key="itemSize" width="150" height="170"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                        <cells>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="BookCollectionViewCell" id="f5S-iV-85p" customClass="BookCollectionViewCell" customModule="BookProject" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="150" height="170"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="Gte-vk-7g8">
+                                    <rect key="frame" x="0.0" y="0.0" width="150" height="170"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="이것의책이름은무엇인가" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MJC-11-0nh">
+                                            <rect key="frame" x="8" y="8" width="134" height="17"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="d4d-oR-cDU">
+                                            <rect key="frame" x="67" y="51.5" width="75" height="118.5"/>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="출판사이름" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BPe-Sg-tC4">
+                                            <rect key="frame" x="8" y="134" width="55" height="20"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="20" id="Dxh-sS-OpK"/>
+                                                <constraint firstAttribute="height" constant="20" id="J9a-Ct-hZ1"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" pointSize="7"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="이거슨 작가이름" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ahd-GU-quo">
+                                            <rect key="frame" x="8" y="29" width="134" height="14.5"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="trailing" secondItem="MJC-11-0nh" secondAttribute="trailing" constant="8" id="10S-6L-sMM"/>
+                                        <constraint firstItem="Ahd-GU-quo" firstAttribute="top" secondItem="MJC-11-0nh" secondAttribute="bottom" constant="4" id="2Id-H9-xY8"/>
+                                        <constraint firstItem="d4d-oR-cDU" firstAttribute="top" secondItem="Ahd-GU-quo" secondAttribute="bottom" constant="8" id="B3H-Yd-s1L"/>
+                                        <constraint firstItem="d4d-oR-cDU" firstAttribute="leading" secondItem="BPe-Sg-tC4" secondAttribute="trailing" constant="4" id="Bhj-p9-ORz"/>
+                                        <constraint firstItem="MJC-11-0nh" firstAttribute="top" secondItem="Gte-vk-7g8" secondAttribute="top" constant="8" id="L7y-Es-4zO"/>
+                                        <constraint firstAttribute="trailing" secondItem="Ahd-GU-quo" secondAttribute="trailing" constant="8" id="UDZ-2Q-jOv"/>
+                                        <constraint firstItem="d4d-oR-cDU" firstAttribute="width" secondItem="Gte-vk-7g8" secondAttribute="width" multiplier="0.5" id="ZOh-S7-9uf"/>
+                                        <constraint firstItem="MJC-11-0nh" firstAttribute="leading" secondItem="Gte-vk-7g8" secondAttribute="leading" constant="8" id="bcd-Ri-EI9"/>
+                                        <constraint firstAttribute="bottom" secondItem="BPe-Sg-tC4" secondAttribute="bottom" constant="16" id="dnh-ZP-R3p"/>
+                                        <constraint firstItem="BPe-Sg-tC4" firstAttribute="leading" secondItem="Gte-vk-7g8" secondAttribute="leading" constant="8" id="swp-Zp-Q3Z"/>
+                                        <constraint firstAttribute="trailing" secondItem="d4d-oR-cDU" secondAttribute="trailing" constant="8" id="uZv-33-D1m"/>
+                                        <constraint firstItem="Ahd-GU-quo" firstAttribute="leading" secondItem="Gte-vk-7g8" secondAttribute="leading" constant="8" id="xc1-eY-kiM"/>
+                                        <constraint firstAttribute="bottom" secondItem="d4d-oR-cDU" secondAttribute="bottom" id="z5D-sr-N78"/>
+                                    </constraints>
+                                </collectionViewCellContentView>
+                                <size key="customSize" width="150" height="170"/>
+                                <connections>
+                                    <outlet property="baseView" destination="Gte-vk-7g8" id="bL2-rb-BNy"/>
+                                    <outlet property="bookAuthorLabel" destination="Ahd-GU-quo" id="Qjj-6k-s7X"/>
+                                    <outlet property="bookPublisherLabel" destination="BPe-Sg-tC4" id="dSB-4N-jUu"/>
+                                    <outlet property="bookTitleLabel" destination="MJC-11-0nh" id="YB3-TU-rOv"/>
+                                    <outlet property="posterImageView" destination="d4d-oR-cDU" id="GXH-dz-VJS"/>
+                                </connections>
+                            </collectionViewCell>
+                        </cells>
+                        <connections>
+                            <outlet property="dataSource" destination="70H-C5-f7p" id="zE2-lu-uw1"/>
+                            <outlet property="delegate" destination="70H-C5-f7p" id="5gu-Dc-eKf"/>
+                        </connections>
+                    </collectionView>
+                </collectionViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mHd-6k-B95" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="869.56521739130437" y="79.6875"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
