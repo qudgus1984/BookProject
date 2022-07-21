@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="70H-C5-f7p">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Xeh-uD-Z1K">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
@@ -22,12 +22,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="30" y="80"/>
+            <point key="canvasLocation" x="-661" y="80"/>
         </scene>
         <!--Book Collection View Controller-->
         <scene sceneID="v1s-Ze-Ea1">
             <objects>
-                <collectionViewController id="70H-C5-f7p" customClass="BookCollectionViewController" customModule="BookProject" customModuleProvider="target" sceneMemberID="viewController">
+                <collectionViewController storyboardIdentifier="BookCollectionViewController" id="70H-C5-f7p" customClass="BookCollectionViewController" customModule="BookProject" customModuleProvider="target" sceneMemberID="viewController">
                     <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="IsX-JY-ACy">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -39,7 +39,7 @@
                             <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                         </collectionViewFlowLayout>
                         <cells>
-                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="BookCollectionViewCell" id="f5S-iV-85p" customClass="BookCollectionViewCell" customModule="BookProject" customModuleProvider="target">
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" restorationIdentifier="BookCollectionViewCell" reuseIdentifier="BookCollectionViewCell" id="f5S-iV-85p" customClass="BookCollectionViewCell" customModule="BookProject" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="0.0" width="150" height="170"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="Gte-vk-7g8">
@@ -103,10 +103,29 @@
                             <outlet property="delegate" destination="70H-C5-f7p" id="5gu-Dc-eKf"/>
                         </connections>
                     </collectionView>
+                    <navigationItem key="navigationItem" id="hx9-2R-wQN"/>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mHd-6k-B95" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="869.56521739130437" y="79.6875"/>
+            <point key="canvasLocation" x="1442" y="100"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Fx9-27-7xW">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Xeh-uD-Z1K" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="31t-2K-Mn6">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="70H-C5-f7p" kind="relationship" relationship="rootViewController" id="wf6-Bk-FiU"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0aF-KR-kdd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="654" y="100"/>
         </scene>
     </scenes>
     <resources>

@@ -10,10 +10,14 @@ import UIKit
 
 class BookCollectionViewController: UICollectionViewController {
     
+    static let identifier = "BookCollectionViewController"
+        
     var bookData = BookInfo()
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        // layout 관련
         
         let layout = UICollectionViewFlowLayout()
         let spacing: CGFloat = 8
@@ -27,7 +31,22 @@ class BookCollectionViewController: UICollectionViewController {
         
         collectionView.collectionViewLayout = layout
 
+        // nav 상단 화면 구성
+        navigationItem.title = "title"
+        navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(systemName: "magnifyingglass"), style: .plain, target: self, action: #selector(searchButtonClicked))
+        navigationItem.rightBarButtonItem?.tintColor = .black
+    }
+    
+    @objc func searchButtonClicked() {
+        // 검색화면 UIVC
+        let sb = UIStoryboard(name: "Search", bundle: nil)
+        let vc = sb.instantiateViewController(withIdentifier: "SearchViewController") as! SearchViewController
+        
+        let nav = UINavigationController(rootViewController: vc)
+        nav.modalPresentationStyle = .fullScreen
 
+        self.present(nav, animated: true)
+        
     }
     
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -46,6 +65,11 @@ class BookCollectionViewController: UICollectionViewController {
         return cell
     }
     
-    
+    override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let sb = UIStoryboard(name: "Detail", bundle: nil)
+        let vc = sb.instantiateViewController(withIdentifier: "DetailViewController") as! DetailViewController
+        self.navigationController?.pushViewController(vc, animated: true)
+
+    }
 
 }

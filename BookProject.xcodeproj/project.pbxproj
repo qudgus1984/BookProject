@@ -19,6 +19,12 @@
 		2FAF7DE32887EDA800CEF954 /* BookData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FAF7DE22887EDA800CEF954 /* BookData.swift */; };
 		2FAF7DE72887F7EF00CEF954 /* UIColor + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FAF7DE62887F7EF00CEF954 /* UIColor + Extension.swift */; };
 		2FAF7DEA28884FFE00CEF954 /* MovieData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FAF7DE928884FFE00CEF954 /* MovieData.swift */; };
+		2FD4C0AC2889310D007E760C /* Search.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2FD4C0AB2889310D007E760C /* Search.storyboard */; };
+		2FD4C0B02889330A007E760C /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FD4C0AF2889330A007E760C /* SearchViewController.swift */; };
+		2FD4C0B728893E29007E760C /* Detail.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2FD4C0B628893E29007E760C /* Detail.storyboard */; };
+		2FD4C0B928893E3C007E760C /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FD4C0B828893E3C007E760C /* DetailViewController.swift */; };
+		2FD4C0BE2889463B007E760C /* Website.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2FD4C0BD2889463B007E760C /* Website.storyboard */; };
+		2FD4C0C028894650007E760C /* WebsiteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FD4C0BF28894650007E760C /* WebsiteViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +42,12 @@
 		2FAF7DE22887EDA800CEF954 /* BookData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BookData.swift; sourceTree = "<group>"; };
 		2FAF7DE62887F7EF00CEF954 /* UIColor + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor + Extension.swift"; sourceTree = "<group>"; };
 		2FAF7DE928884FFE00CEF954 /* MovieData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieData.swift; sourceTree = "<group>"; };
+		2FD4C0AB2889310D007E760C /* Search.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Search.storyboard; sourceTree = "<group>"; };
+		2FD4C0AF2889330A007E760C /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
+		2FD4C0B628893E29007E760C /* Detail.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Detail.storyboard; sourceTree = "<group>"; };
+		2FD4C0B828893E3C007E760C /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		2FD4C0BD2889463B007E760C /* Website.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Website.storyboard; sourceTree = "<group>"; };
+		2FD4C0BF28894650007E760C /* WebsiteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebsiteViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,10 +95,10 @@
 		2FAF7DE12887E89900CEF954 /* BookProject */ = {
 			isa = PBXGroup;
 			children = (
-				2FAF7DDF2887E89200CEF954 /* Book.storyboard */,
-				2FAF7DDD2887E88600CEF954 /* BookCollectionViewController.swift */,
-				2FAF7DDB2887E87300CEF954 /* BookCollectionViewCell.swift */,
-				2FAF7DE22887EDA800CEF954 /* BookData.swift */,
+				2FD4C0BA288945D2007E760C /* Web */,
+				2FD4C0AD28893116007E760C /* bookMain */,
+				2FD4C0B128893B1F007E760C /* Detail */,
+				2FD4C0AE2889313D007E760C /* Search */,
 				2FAF7DE62887F7EF00CEF954 /* UIColor + Extension.swift */,
 				2FAF7DE828884FE000CEF954 /* MovieProject */,
 			);
@@ -99,6 +111,44 @@
 				2FAF7DE928884FFE00CEF954 /* MovieData.swift */,
 			);
 			path = MovieProject;
+			sourceTree = "<group>";
+		};
+		2FD4C0AD28893116007E760C /* bookMain */ = {
+			isa = PBXGroup;
+			children = (
+				2FAF7DDD2887E88600CEF954 /* BookCollectionViewController.swift */,
+				2FAF7DDB2887E87300CEF954 /* BookCollectionViewCell.swift */,
+				2FAF7DE22887EDA800CEF954 /* BookData.swift */,
+				2FAF7DDF2887E89200CEF954 /* Book.storyboard */,
+			);
+			name = bookMain;
+			sourceTree = "<group>";
+		};
+		2FD4C0AE2889313D007E760C /* Search */ = {
+			isa = PBXGroup;
+			children = (
+				2FD4C0AB2889310D007E760C /* Search.storyboard */,
+				2FD4C0AF2889330A007E760C /* SearchViewController.swift */,
+			);
+			name = Search;
+			sourceTree = "<group>";
+		};
+		2FD4C0B128893B1F007E760C /* Detail */ = {
+			isa = PBXGroup;
+			children = (
+				2FD4C0B628893E29007E760C /* Detail.storyboard */,
+				2FD4C0B828893E3C007E760C /* DetailViewController.swift */,
+			);
+			path = Detail;
+			sourceTree = "<group>";
+		};
+		2FD4C0BA288945D2007E760C /* Web */ = {
+			isa = PBXGroup;
+			children = (
+				2FD4C0BD2889463B007E760C /* Website.storyboard */,
+				2FD4C0BF28894650007E760C /* WebsiteViewController.swift */,
+			);
+			path = Web;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -163,6 +213,9 @@
 				2FAF7DE02887E89200CEF954 /* Book.storyboard in Resources */,
 				2FAF7DD12887E7F500CEF954 /* Assets.xcassets in Resources */,
 				2FAF7DCF2887E7F300CEF954 /* Main.storyboard in Resources */,
+				2FD4C0AC2889310D007E760C /* Search.storyboard in Resources */,
+				2FD4C0B728893E29007E760C /* Detail.storyboard in Resources */,
+				2FD4C0BE2889463B007E760C /* Website.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -176,9 +229,12 @@
 				2FAF7DE72887F7EF00CEF954 /* UIColor + Extension.swift in Sources */,
 				2FAF7DCC2887E7F300CEF954 /* ViewController.swift in Sources */,
 				2FAF7DDC2887E87300CEF954 /* BookCollectionViewCell.swift in Sources */,
+				2FD4C0B02889330A007E760C /* SearchViewController.swift in Sources */,
 				2FAF7DE32887EDA800CEF954 /* BookData.swift in Sources */,
 				2FAF7DEA28884FFE00CEF954 /* MovieData.swift in Sources */,
 				2FAF7DC82887E7F300CEF954 /* AppDelegate.swift in Sources */,
+				2FD4C0C028894650007E760C /* WebsiteViewController.swift in Sources */,
+				2FD4C0B928893E3C007E760C /* DetailViewController.swift in Sources */,
 				2FAF7DCA2887E7F300CEF954 /* SceneDelegate.swift in Sources */,
 				2FAF7DDE2887E88600CEF954 /* BookCollectionViewController.swift in Sources */,
 			);
